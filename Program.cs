@@ -15,7 +15,7 @@ int Array ()
 
 
     int max = arr[0];
-    for (int i = 0; i < len; i++) // поиск максимального числа
+    for (int i = 0; i < len; i++) 
     {
         if (arr[i] > max)
         {
@@ -29,7 +29,7 @@ int Array ()
 
 
     int min = arr[0];
-    for (int i = 0; i < len; i++) // поиск минимального числа
+    for (int i = 0; i < len; i++) 
     {
         if (arr[i] < min)
         {
