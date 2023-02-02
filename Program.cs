@@ -1,47 +1,26 @@
-﻿// Задача 38: Задайте массив целых чисел. Найдите разницу между максимальным и минимальным элементов массива.
-// [3 7 22 2 78] -> 76
+// 34 Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+// [345, 897, 568, 234] -> 2
 
-Console.Write("Введите длину массива: ");
-int len = Convert.ToInt32(Console.ReadLine());
 
-int Array ()
+int Random_Array ()
 {
-
-    int[] arr = new int [len];
-    for (int i = 0; i < len; i++)
+    int index = 0;
+    int[] collection = new int [900];
+    while (index < collection.Length)
     {
-        arr[i] = new Random().Next(0, len);
+        collection[index] = new Random().Next(100, 1000);
+        index++;
     }
 
-
-    int max = arr[0];
-    for (int i = 0; i < len; i++) // поиск максимального числа
+    int count = 0; 
+    for (int i = 0; i < collection.Length; i++)
     {
-        if (arr[i] > max)
+        if (collection[i] % 2 == 0)
         {
-            max = arr[i];
+            count++;
         }
-        else
-        {
-            max = max;
-        }
-    }
-
-
-    int min = arr[0];
-    for (int i = 0; i < len; i++) // поиск минимального числа
-    {
-        if (arr[i] < min)
-        {
-            min = arr[i];
-        }
-        else
-        {
-            min = min;
-        }
-    }
-
-    return max - min;
+    } 
+    return count; 
 }
 
-Console.WriteLine(Array());
+Console.WriteLine(Random_Array());
